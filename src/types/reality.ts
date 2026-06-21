@@ -1,0 +1,1 @@
+export type Reality = 'designer' | 'observer' | 'builder'
