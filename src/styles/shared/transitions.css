@@ -1,0 +1,123 @@
+/* ─────────────────────────────────────────────
+   SELF-HOSTED FONT DECLARATIONS
+   All fonts loaded here, upfront, for all three
+   realities. font-display: block prevents any
+   flash of unstyled text when switching realities.
+
+   Files live in public/fonts/
+   See public/fonts/README.md for download links.
+───────────────────────────────────────────── */
+
+
+/* ═══════════════════════════════════════════
+   REALITY 01 — THE DESIGNER
+   Instrument Serif · Inter · DM Mono
+═══════════════════════════════════════════ */
+
+@font-face {
+    font-family: 'Instrument Serif';
+    src: url('/fonts/Instrument_Serif-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    src: url('/fonts/Instrument_Serif-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'DM Mono';
+    src: url('/fonts/DM_Mono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* ═══════════════════════════════════════════
+   REALITY 02 — THE OBSERVER
+   Syne · JetBrains Mono
+═══════════════════════════════════════════ */
+
+@font-face {
+    font-family: 'Syne';
+    src: url('/fonts/Syne-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Syne';
+    src: url('/fonts/Syne-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* ═══════════════════════════════════════════
+   REALITY 03 — THE BUILDER
+   Geist Mono · Geist Sans
+═══════════════════════════════════════════ */
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('/fonts/GeistMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('/fonts/GeistSans-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('/fonts/GeistSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}

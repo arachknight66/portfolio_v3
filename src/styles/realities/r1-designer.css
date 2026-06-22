@@ -1,0 +1,44 @@
+/* ─────────────────────────────────────────────
+   REALITY 01 — THE DESIGNER
+   Scoped entirely under [data-reality="designer"]
+   White · Instrument Serif · Editorial · #FF4D00
+───────────────────────────────────────────── */
+
+[data-reality="designer"] {
+
+    /* ── Colour tokens ───────────────────────── */
+    --r1-bg: #FFFFFF;
+    --r1-surface: #F5F5F3;
+    --r1-border: #E8E8E4;
+    --r1-text: #111111;
+    --r1-muted: #888880;
+    --r1-muted2: #BBBBB5;
+    --r1-accent: #FF4D00;
+    /* used ≤ 3× per screen */
+
+    /* ── Typography tokens ───────────────────── */
+    --r1-font-display: 'Instrument Serif', Georgia, serif;
+    --r1-font-body: 'Inter', system-ui, sans-serif;
+    --r1-font-mono: 'DM Mono', monospace;
+
+    /* ── Layout ──────────────────────────────── */
+    --r1-content-max: 680px;
+    --r1-gutter: clamp(20px, 5vw, 80px);
+
+    /* ── Motion ──────────────────────────────── */
+    --r1-reveal-duration: 700ms;
+    --r1-reveal-delay-step: 80ms;
+    --r1-hover-duration: 200ms;
+
+    /* ── Applied to root ─────────────────────── */
+    background: var(--r1-bg);
+    color: var(--r1-text);
+    font-family: var(--r1-font-body);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Selection colour override for R1 */
+[data-reality="designer"] ::selection {
+    background: rgba(255, 77, 0, 0.12);
+}

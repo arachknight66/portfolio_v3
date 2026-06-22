@@ -1,0 +1,86 @@
+/* ─────────────────────────────────────────────
+   RESET
+   Minimal on top of Tailwind preflight.
+   Only overrides that are genuinely needed.
+───────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* Stable scrollbar prevents layout shift when
+     content height changes between realities     */
+    scrollbar-gutter: stable;
+}
+
+/* Hide the native cursor globally.
+   CustomCursor component owns pointer rendering. */
+html,
+body {
+    cursor: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Canvas elements must not create scrollbars */
+canvas {
+    display: block;
+    max-width: 100%;
+}
+
+/* Strip all default button chrome —
+   each reality styles its own interactive elements */
+button {
+    all: unset;
+    cursor: none;
+}
+
+/* Anchor resets — reality CSS re-applies styling */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Remove default list styling */
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Images never overflow their containers */
+img,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Smooth scroll — can be overridden per reality */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,48 @@
+/* ─────────────────────────────────────────────
+   REALITY 02 — THE OBSERVER
+   Scoped entirely under [data-reality="observer"]
+   Deep space · Syne · Nebula canvas · #C084FC
+───────────────────────────────────────────── */
+
+[data-reality="observer"] {
+
+    /* ── Colour tokens ───────────────────────── */
+    --r2-bg: #08060F;
+    --r2-surface: #0D0B1A;
+    --r2-border: rgba(192, 132, 252, 0.15);
+    --r2-border-hover: rgba(192, 132, 252, 0.40);
+    --r2-text: rgba(255, 255, 255, 0.90);
+    --r2-muted: rgba(255, 255, 255, 0.45);
+    --r2-muted2: rgba(255, 255, 255, 0.25);
+    --r2-accent: #C084FC;
+    /* violet */
+    --r2-accent2: #818CF8;
+    /* indigo */
+
+    /* ── Typography tokens ───────────────────── */
+    --r2-font-display: 'Syne', system-ui, sans-serif;
+    --r2-font-mono: 'JetBrains Mono', monospace;
+
+    /* ── Layout ──────────────────────────────── */
+    --r2-content-max: 900px;
+    --r2-gutter: clamp(20px, 5vw, 80px);
+
+    /* ── Motion ──────────────────────────────── */
+    --r2-type-speed: 18ms;
+    /* ms per character for typing reveals */
+    --r2-hover-duration: 300ms;
+    --r2-orbit-period: 30s;
+    /* full rotation of orbital parent     */
+
+    /* ── Applied to root ─────────────────────── */
+    background: var(--r2-bg);
+    color: var(--r2-text);
+    font-family: var(--r2-font-mono);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Selection colour override for R2 */
+[data-reality="observer"] ::selection {
+    background: rgba(192, 132, 252, 0.20);
+}

@@ -1,0 +1,57 @@
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS — SHARED
+   Only truly global, reality-agnostic values.
+   Reality-specific tokens live in:
+   src/styles/realities/r1-designer.css
+   src/styles/realities/r2-observer.css
+   src/styles/realities/r3-builder.css
+───────────────────────────────────────────── */
+
+:root {
+
+    /* ── Easing curves ───────────────────────────
+     --ease-reality  : primary ease across all realities
+                       fast out, instant settle
+     --ease-iris     : used specifically for iris transition
+     --ease-snap     : binary — used in R3 for instant reveals  */
+    --ease-reality: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-iris: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-snap: steps(1);
+
+    /* ── Duration scale ──────────────────────────
+     Named by feel, not by milliseconds.          */
+    --duration-instant: 80ms;
+    --duration-fast: 180ms;
+    --duration-normal: 320ms;
+    --duration-slow: 640ms;
+    --duration-cinematic: 800ms;
+
+    /* ── Reality transition durations ───────────  */
+    --transition-iris: 640ms;
+    /* R01 → R02 : iris close + open  */
+    --transition-glitch: 480ms;
+    /* R02 → R03 : tears + scanline   */
+    --transition-flash: 380ms;
+    /* R03 → R01 : white flash        */
+
+    /* ── Loading screen phase timings ───────────  */
+    --loading-phase-1: 600ms;
+    --loading-phase-2: 600ms;
+    --loading-phase-3: 800ms;
+    --loading-phase-4: 400ms;
+    --loading-total: 2400ms;
+    --loading-skip-after: 1200ms;
+
+    /* ── Z-index layers ──────────────────────────
+     Everything in the app should use these.
+     Never use a raw z-index number in component CSS. */
+    --z-background: -1;
+    --z-content: 1;
+    --z-sticky: 10;
+    --z-nav: 100;
+    --z-easter-egg: 500;
+    --z-transition: 900;
+    --z-cursor: 998;
+    --z-loading: 1000;
+
+}
