@@ -4,10 +4,10 @@
    Do not reorder.
 ───────────────────────────────────────────── */
 
-@import './reset.css';
-@import './tokens.css';
-@import './fonts.css';
-@import './transitions.css';
+@import '../styles/shared/reset.css';
+@import '../styles/shared/tokens.css';
+@import '../styles/shared/fonts.css';
+@import '../styles/shared/transitions.css';
 
 /* ── Base body ───────────────────────────────
    Unstyled intentionally — each reality root
