@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { RealitySwitcher } from '@/components/shared'
+import { LoadingScreen } from '@/components/loading'
 
 export const metadata: Metadata = {
     title: 'Daksh Saini',
@@ -23,6 +24,10 @@ export default function RootLayout({
                 <a href="#main" className="skip-link">
                     Skip to content
                 </a>
+
+                {/* ── Loading screen — sits above everything ──
+            Unmounts itself once loadingComplete = true  */}
+                <LoadingScreen />
 
                 {/* ── Always-visible persistent elements ── */}
                 <RealitySwitcher />

@@ -1,1 +1,2 @@
-// Animation configs are added per phase.
+export * from './loading'
+// Additional animation configs exported per phase.
