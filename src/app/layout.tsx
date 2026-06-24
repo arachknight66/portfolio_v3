@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { RealitySwitcher } from '@/components/shared'
+import { RealitySwitcher, CustomCursor } from '@/components/shared'
 import { LoadingScreen } from '@/components/loading'
 
 export const metadata: Metadata = {
@@ -30,6 +30,7 @@ export default function RootLayout({
                 <LoadingScreen />
 
                 {/* ── Always-visible persistent elements ── */}
+                <CustomCursor />
                 <RealitySwitcher />
 
                 {/* ── Transition overlays ──────────────────

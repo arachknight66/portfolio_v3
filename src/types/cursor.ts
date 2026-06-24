@@ -1,4 +1,4 @@
-export type CursorContext = 'default' | 'text' | 'project' | 'link' | 'interactive'
+export type CursorContext = 'default' | 'text' | 'project' | 'link' | 'interactive' | 'easter-egg'
 
 export interface CursorState {
     x: number

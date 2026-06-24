@@ -26,12 +26,12 @@ const REALITY_IDS: Record<Reality, string> = {
 
 export function RealityWatcher() {
     const current = useRealityStore((s) => s.current)
+    const loadingComplete = useRealityStore((s) => s.loadingComplete)
 
+    // ── Sync data-reality on <body> ───────────
     useEffect(() => {
-        // 1. Sync data-reality attribute on <body>
         document.body.setAttribute('data-reality', current)
 
-        // 2. Toggle .active on each reality root div
         Object.entries(REALITY_IDS).forEach(([reality, domId]) => {
             const el = document.getElementById(domId)
             if (!el) return
@@ -43,6 +43,15 @@ export function RealityWatcher() {
         })
     }, [current])
 
-    // Renders nothing — side-effects only
+    // ── Sync data-loading on <body> ───────────
+    // CSS uses this to hide the switcher + cursor
+    // while the loading screen is playing.
+    useEffect(() => {
+        document.body.setAttribute(
+            'data-loading',
+            loadingComplete ? 'false' : 'true',
+        )
+    }, [loadingComplete])
+
     return null
 }

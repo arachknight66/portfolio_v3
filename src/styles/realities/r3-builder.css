@@ -1,48 +1,99 @@
 /* ─────────────────────────────────────────────
-   REALITY 02 — THE OBSERVER
-   Scoped entirely under [data-reality="observer"]
-   Deep space · Syne · Nebula canvas · #C084FC
+   REALITY 03 — THE BUILDER
+   Scoped entirely under [data-reality="builder"]
+   Terminal · Geist Mono · #ADFF2F electric green
 ───────────────────────────────────────────── */
 
-[data-reality="observer"] {
+[data-reality="builder"] {
 
     /* ── Colour tokens ───────────────────────── */
-    --r2-bg: #08060F;
-    --r2-surface: #0D0B1A;
-    --r2-border: rgba(192, 132, 252, 0.15);
-    --r2-border-hover: rgba(192, 132, 252, 0.40);
-    --r2-text: rgba(255, 255, 255, 0.90);
-    --r2-muted: rgba(255, 255, 255, 0.45);
-    --r2-muted2: rgba(255, 255, 255, 0.25);
-    --r2-accent: #C084FC;
-    /* violet */
-    --r2-accent2: #818CF8;
-    /* indigo */
+    --r3-bg: #0D0D0D;
+    --r3-surface: #1A1A1A;
+    --r3-surface2: #141414;
+    --r3-border: #2A2A2A;
+    --r3-text: #F0F0EE;
+    --r3-muted: #555550;
+    --r3-muted2: #3A3A35;
+    --r3-accent: #ADFF2F;
+    /* electric green — primary accent   */
+    --r3-violet: #818CF8;
+    /* syntax: key names in code objects  */
+    --r3-orange: #F97316;
+    /* syntax: numbers in code objects    */
+    --r3-comment: #555550;
+    /* syntax: comments                   */
 
     /* ── Typography tokens ───────────────────── */
-    --r2-font-display: 'Syne', system-ui, sans-serif;
-    --r2-font-mono: 'JetBrains Mono', monospace;
+    --r3-font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
+    --r3-font-sans: 'Geist Sans', system-ui, sans-serif;
 
     /* ── Layout ──────────────────────────────── */
-    --r2-content-max: 900px;
-    --r2-gutter: clamp(20px, 5vw, 80px);
+    --r3-content-max: 780px;
+    --r3-gutter: clamp(20px, 5vw, 80px);
 
     /* ── Motion ──────────────────────────────── */
-    --r2-type-speed: 18ms;
-    /* ms per character for typing reveals */
-    --r2-hover-duration: 300ms;
-    --r2-orbit-period: 30s;
-    /* full rotation of orbital parent     */
+    --r3-type-speed: 22ms;
+    /* ms per character for terminal typing */
+    --r3-cursor-blink: 530ms;
+    /* must match cursor component exactly  */
 
     /* ── Applied to root ─────────────────────── */
-    background: var(--r2-bg);
-    color: var(--r2-text);
-    font-family: var(--r2-font-mono);
+    background: var(--r3-bg);
+    color: var(--r3-text);
+    font-family: var(--r3-font-mono);
     font-weight: 400;
     line-height: 1.6;
 }
 
-/* Selection colour override for R2 */
-[data-reality="observer"] ::selection {
-    background: rgba(192, 132, 252, 0.20);
+/* Selection colour override for R3 */
+[data-reality="builder"] ::selection {
+    background: rgba(173, 255, 47, 0.15);
+}
+
+/* ── Reality Switcher — R3 appearance ───────── */
+[data-reality="builder"] .reality-switcher-btn {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: var(--z-nav);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: none;
+    opacity: 1;
+    transition: opacity var(--duration-fast);
+}
+
+[data-reality="builder"] .reality-switcher-btn:disabled {
+    opacity: 0.25;
+}
+
+[data-reality="builder"] .reality-switcher-label {
+    display: block;
+    font-family: var(--r3-font-mono);
+    font-size: 0.75rem;
+    color: var(--r3-accent);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    padding: 4px 0;
+}
+
+[data-reality="builder"] .reality-switcher-label .switcher-cursor {
+    display: inline-block;
+    width: 7px;
+    height: 1em;
+    background: var(--r3-accent);
+    margin-left: 3px;
+    vertical-align: text-bottom;
+    animation: blink var(--r3-cursor-blink) step-end infinite;
+}
+
+/* On hover — underline the --reality flag */
+[data-reality="builder"] .reality-switcher-btn:not(:disabled):hover .reality-switcher-label {
+    opacity: 0.75;
+}
+
+[data-loading="true"] .reality-switcher-btn {
+    opacity: 0;
+    pointer-events: none;
 }

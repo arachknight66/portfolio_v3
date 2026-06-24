@@ -69,3 +69,10 @@ body {
         opacity: 0;
     }
 }
+
+/* ── Hide persistent elements during loading ─
+   RealityWatcher sets data-loading on <body>. */
+[data-loading="true"] .reality-switcher-btn {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
